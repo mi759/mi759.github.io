@@ -2,6 +2,7 @@
 title: "Joseph Roth: Panoptikum am Sonntag (1928)"
 date: 2023-03-10T11:40:59+09:00
 draft: false
+tags: ["翻訳", "ドイツ文学", "Joseph Roth"]
 ---
 
 <!-- 以下に表を貼り付け -->

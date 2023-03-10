@@ -8,4 +8,4 @@ draft: false
 
 * ヨーゼフ・ロート Joseph Roth (1894-1939)
     - [日本大百科全書での作者紹介(外部サイト)◇](https://kotobank.jp/word/%E3%83%AD%E3%83%BC%E3%83%88%28Joseph%20Roth%29-1610191)
-    - [日曜日の蝋人形館 Panoptikum am Sonntag (1928)](/roth_panoptikum_am_sonntag)
+    - [日曜日の蝋人形館 Panoptikum am Sonntag (1928)](/translations/roth_panoptikum_am_sonntag)

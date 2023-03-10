@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "header.html" . -}}
+    <body>
+        <script type="text/javascript" src="{{ .Site.BaseURL }}js/translation_table.js"></script>
+        <div class="content">
+        {{- partial "head.html" . -}}
+        {{- block "main" . }}{{- end }}
+        {{- partial "footer.html" . -}}
+        </div>
+    </body>
+</html>

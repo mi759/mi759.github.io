@@ -1,3 +1,51 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = 'http://mi759.github.io/'
+languageCode = 'ja-jp'
+title = '試訳そのほか'
+theme = 'archie'
+copyright = '© mi759'
+hasCJKLanguage = true # Wordcount
+# Code Highlight
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+paginate=5 # articles per page
+
+[markup]
+	[markup.goldmark]
+		[markup.goldmark.renderer]
+			unsafe = true # Do not omit raw HTML
+
+[params]
+	mode="toggle" # color-mode → light,dark,toggle or auto
+	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
+	customcss = ["css/table.css"]
+	subtitle = "英語やドイツ語の作品の試訳など。"
+	mainSections = ["posts"]
+
+# Main menu Items
+
+[[menu.main]]
+name = "ホーム"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "概要"
+url = "/about"
+weight = 2
+
+[[menu.main]]
+name = "翻訳"
+url = "/translations/list"
+weight = 3
+
+[[menu.main]]
+name = "一覧"
+url = "/posts"
+weight = 4
+
+[[menu.main]]
+name = "タグ"
+url = "/tags"
+weight = 5

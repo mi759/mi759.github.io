@@ -1,0 +1,61 @@
+/* This CSS controls the style of translation tables. */
+
+/* Noto Serif Japanese (Regular 400 and Bold 700) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+
+div.translation table{
+    font-family: "Times New Roman", "Noto Serif JP", serif;
+    border-top: 1px solid #dfe2e5;
+    border-collapse: separate;
+    border-spacing: 2px 0px;
+}
+
+div.translation table td {
+    padding: 0px;
+    border: none;
+}
+
+.source {
+    width: 50%;
+    text-indent: 1.2em;
+    vertical-align: top;
+}
+
+.source p{
+    font-family: "Times New Roman", serif;
+    line-height: 1.8em;
+}
+
+.source h1,h2,h3,h4,h5,h6 {
+    text-indent:0em;
+}
+
+.target{
+    width: 50%;
+    text-indent: 1em;
+    vertical-align: top;
+}
+
+.target p{
+    font-family: "Noto Serif JP", serif;
+    line-height: 1.8em;
+}
+
+.target rt{
+    margin-top: 0em;
+    margin-bottom: -0.5em;
+    line-height: 0em;
+}
+
+.target h1,h2,h3,h4,h5,h6 {
+    text-indent: 0em;
+}
+
+.note {
+    display: block;
+    font-size: 0.9em;
+    line-height: 1.2;
+    color: gray;
+    padding-left: 1em;
+    text-indent: 0em;
+}

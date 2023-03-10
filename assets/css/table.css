@@ -6,6 +6,7 @@
 div.translation table{
     font-family: "Times New Roman", "Noto Serif JP", serif;
     border-top: 1px solid #dfe2e5;
+    border-bottom: 1px solid #dfe2e5;
     border-collapse: separate;
     border-spacing: 2px 0px;
 }

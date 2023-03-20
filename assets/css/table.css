@@ -25,6 +25,8 @@ div.translation table td {
 .source p{
     font-family: "Times New Roman", serif;
     line-height: 1.8em;
+    margin-top: 0px;
+    margin-bottom: 0.5em;
 }
 
 .source h1,h2,h3,h4,h5,h6 {
@@ -40,6 +42,8 @@ div.translation table td {
 .target p{
     font-family: "Noto Serif JP", serif;
     line-height: 1.8em;
+    margin-top: 0px;
+    margin-bottom: 0.5em;
 }
 
 .target rt{
@@ -49,6 +53,16 @@ div.translation table td {
 }
 
 .target h1,h2,h3,h4,h5,h6 {
+    text-indent: 0em;
+}
+
+.center {
+    text-align: center;
+    text-indent: 0em;
+}
+
+.right {
+    text-align: right;
     text-indent: 0em;
 }
 

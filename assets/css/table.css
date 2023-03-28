@@ -66,6 +66,10 @@ div.translation table td {
     text-indent: 0em;
 }
 
+.spaced {
+    letter-spacing: 0.2rem;
+}
+
 .note {
     display: block;
     font-size: 0.9em;

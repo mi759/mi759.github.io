@@ -8,6 +8,7 @@ draft: false
 
 - フリードリヒ・シラー Friedrich Schiller (1759-1805)
     - [日本大百科全書での作者紹介(外部サイト)◇](https://kotobank.jp/word/%E3%82%B7%E3%83%A9%E3%83%BC%28Friedrich%20von%20Schiller%29-1546468)
+    - [直近の歴史における寛大な行い Eine großmütige Handlung aus der neusten Geschichte (1782)](/translations/schiller_grossmuetige_handlung/text)
     - [旅するデンマーク人の手紙 Brief eines reisenden Dänen (1785)](/translations/schiller_brief_eines_reisenden_daenen/text)
     - メッシーナの花嫁 Die Braut von Messina (1803)
         * [序文: 悲劇における合唱団の使用について Über den Gebrauch des Chors in der Tragödie (1803)](/translations/schiller_braut_von_messina/schiller_gebrauch_des_chors/text)

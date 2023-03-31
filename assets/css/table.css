@@ -70,6 +70,14 @@ div.translation table td {
     letter-spacing: 0.2rem;
 }
 
+.emphasized {
+    background-position: top left;
+    background-repeat: repeat-x;
+    background-image: radial-gradient(black 10%, transparent 15%);
+    background-size: 1em 1em;
+    padding-top: .5em;
+}
+
 .note {
     display: block;
     font-size: 0.9em;

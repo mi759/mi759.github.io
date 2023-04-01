@@ -78,6 +78,20 @@ div.translation table td {
     padding-top: .5em;
 }
 
+.stanza {
+    text-indent: 0em;
+    padding-left: 1em;
+}
+
+.stanza2 {
+    text-indent: 0em;
+    padding-left: 3em;
+}
+
+.stanza-title {
+    padding-left: 2em;
+}
+
 .note {
     display: block;
     font-size: 0.9em;

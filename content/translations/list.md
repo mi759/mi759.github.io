@@ -14,7 +14,11 @@ draft: false
         * [序文: 悲劇における合唱団の使用について Über den Gebrauch des Chors in der Tragödie (1803)](/translations/schiller_braut_von_messina/schiller_gebrauch_des_chors/text)
     - [悲劇と喜劇 Tragödie und Komödie (????)](/translations/schiller_tragoedie_und_komoedie/text)
 
-* ヨーゼフ・ロート Joseph Roth (1894-1939)
+* クレーメンス・ブレンターノ Clemens Brentano (1778-1842)
+    - [日本大百科全書での作者紹介(外部サイト)◇](https://kotobank.jp/word/%E3%83%96%E3%83%AC%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8E%28Clemens%20Brentano%29-1588489)
+    - [平和人形の入った箱 Die Schachtel mit der Friedenspuppe (1815)](/translations/brentano_schachtel_mit_friedenspuppe/text)
+
+- ヨーゼフ・ロート Joseph Roth (1894-1939)
     - [日本大百科全書での作者紹介(外部サイト)◇](https://kotobank.jp/word/%E3%83%AD%E3%83%BC%E3%83%88%28Joseph%20Roth%29-1610191)
     - [壁掛けカレンダーの詩 Gedicht von Wandkalendern (1928)](/translations/roth_gedicht_von_wandkalendern/text)
     - [日曜日の蝋人形館 Panoptikum am Sonntag (1928)](/translations/roth_panoptikum_am_sonntag/text)

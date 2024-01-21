@@ -13,6 +13,13 @@ paginate=5 # articles per page
 
 [markup]
   defaultMarkdownHandler = 'goldmark'
+  [markup.goldmark]
+  	[markup.goldmark.renderer]
+      hardWraps = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+
 
 [security]
  [security.exec]

@@ -77,17 +77,17 @@ h6 {
 
 /* Utilities */
 
-.text-center {
+.center {
     text-align: center;
     text-indent: 0em;
 }
 
-.text-right {
+.right {
     text-align: right;
     text-indent: 0em;
 }
 
-.text-spaced {
+.spaced {
     letter-spacing: 0.2rem;
 }
 

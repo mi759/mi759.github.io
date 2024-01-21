@@ -3,7 +3,8 @@
 /* Noto Serif Japanese (Regular 400 and Bold 700) */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
 
-div.translation table{
+/* General settings */
+div.translation table {
     font-family: "Times New Roman", "Noto Serif JP", serif;
     border-top: 1px solid #dfe2e5;
     border-bottom: 1px solid #dfe2e5;
@@ -22,51 +23,71 @@ div.translation table td {
     vertical-align: top;
 }
 
-.source p{
-    font-family: "Times New Roman", serif;
+.source p {
+    font-family: "Georgia", serif;
     line-height: 1.8em;
     margin-top: 0px;
     margin-bottom: 0.5em;
 }
 
-.source h1,h2,h3,h4,h5,h6 {
-    text-indent:0em;
+.source h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-indent: 0em;
 }
 
-.target{
+.target {
     width: 50%;
-    text-indent: 1em;
     vertical-align: top;
 }
 
-.target p{
+.target p {
     font-family: "Noto Serif JP", serif;
     line-height: 1.8em;
     margin-top: 0px;
     margin-bottom: 0.5em;
 }
 
-.target rt{
+.target rt {
     margin-top: 0em;
     margin-bottom: -0.5em;
     line-height: 0em;
 }
 
-.target h1,h2,h3,h4,h5,h6 {
+.target em {
+    font-style: normal;
+    background-position: top left;
+    background-repeat: repeat-x;
+    background-image: radial-gradient(black 10%, transparent 15%);
+    background-size: 1em 1em;
+    padding-top: .5em;
+}
+
+.target h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     text-indent: 0em;
 }
 
-.center {
+/* Utilities */
+
+.text-center {
     text-align: center;
     text-indent: 0em;
 }
 
-.right {
+.text-right {
     text-align: right;
     text-indent: 0em;
 }
 
-.spaced {
+.text-spaced {
     letter-spacing: 0.2rem;
 }
 
@@ -78,25 +99,28 @@ div.translation table td {
     padding-top: .5em;
 }
 
-.stanza {
-    text-indent: 0em;
-    padding-left: 1em;
+
+/* Footnotes */
+.footnotes hr {
+    margin: 0;
 }
 
-.stanza2 {
-    text-indent: 0em;
-    padding-left: 3em;
+.footnotes ol {
+    margin: 0em 0em 0em 1.2em;
+    padding-left: 0;
 }
 
-.stanza-title {
-    padding-left: 2em;
+.footnotes ol li::marker{
+    color:gray;
 }
 
-.note {
-    display: block;
+.footnote {
     font-size: 0.9em;
-    line-height: 1.2;
     color: gray;
-    padding-left: 1em;
+    padding-left: 0.5em;
     text-indent: 0em;
+}
+
+.footnote p {
+    line-height: 1.2;
 }

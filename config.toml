@@ -12,7 +12,7 @@ pygmentscodefencesguesssyntax = true
 paginate=5 # articles per page
 
 [markup]
-  defaultMarkdownHandler = 'dendenmarkdown'
+  defaultMarkdownHandler = 'goldmark'
 
 [security]
  [security.exec]

@@ -91,6 +91,10 @@ h6 {
     letter-spacing: 0.2rem;
 }
 
+.italic {
+    font-style: italic;
+}
+
 .emphasized {
     background-position: top left;
     background-repeat: repeat-x;

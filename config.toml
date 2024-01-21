@@ -12,9 +12,11 @@ pygmentscodefencesguesssyntax = true
 paginate=5 # articles per page
 
 [markup]
-	[markup.goldmark]
-		[markup.goldmark.renderer]
-			unsafe = true # Do not omit raw HTML
+  defaultMarkdownHandler = 'dendenmarkdown'
+
+[security]
+ [security.exec]
+    allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$', 'ddmd-go-wrapper']
 
 [params]
 	mode="toggle" # color-mode → light,dark,toggle or auto

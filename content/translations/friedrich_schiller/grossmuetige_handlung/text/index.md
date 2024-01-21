@@ -5,7 +5,7 @@ draft: false
 tags: ["翻訳", "ドイツ文学", "Friedrich Schiller"]
 ---
 
-{{< translationTable original="translations/schiller_grossmuetige_handlung/text/de.md" translated="translations/schiller_grossmuetige_handlung/text/ja.md" >}}
+{{< translationTableRelative original="de.md" translated="ja.md" >}}
 
 - **原文出典:** [Projekt Gutenberg](https://www.projekt-gutenberg.org/schiller/grossmut/grossmut.html) ※下記全集および初出を参照して内容や表記を大幅に改めた。  
 - **初出:** [Wittembergisches Repertorium der Litteratur. Eine Vierteljahr-Schrift. Zweites Stück. Auf Kosten der Herausgeber, 1782](https://opacplus.bsb-muenchen.de/title/7398960), S. 268-273.  

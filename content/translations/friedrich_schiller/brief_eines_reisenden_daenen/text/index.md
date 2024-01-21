@@ -5,7 +5,7 @@ draft: false
 tags: ["翻訳", "ドイツ文学", "Friedrich Schiller"]
 ---
 
-{{< translationTable original="translations/schiller_brief_eines_reisenden_daenen/text/de.md" translated="translations/schiller_brief_eines_reisenden_daenen/text/ja.md" >}}
+{{< translationTableRelative original="de.md" translated="ja.md" >}}
 
 ### 訳注
 - **ファルネーゼのヘラクレス:** オリジナルは前4世紀末のギリシア南部シキュオンの彫刻家による作品と考えられるが現存せず、シラーが見たレプリカはローマ時代のグリュコン(詳細未詳)による複製をもとにしている。複製はカラカラ帝の浴場から発掘され、現在はナポリの国立考古学博物館にある。当初は脚がなかったため想像で付け足され、1787年になってようやく本来の脚に代えられた。画像は1592年頃の版画(出典: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Goltzius,_Hendrik_-_Hercules_Farnese_-_c._1592.jpg))。

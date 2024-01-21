@@ -5,8 +5,7 @@ draft: false
 tags: ["翻訳", "ドイツ文学", "Joseph Roth"]
 ---
 
-{{< translationTable original="translations/roth_gedicht_von_wandkalendern/text/de.md" translated="translations/roth_gedicht_von_wandkalendern/text/ja.md" >}}
-
+{{< translationTableRelative original="de.md" translated="ja.md" >}}
 - **原文出典:** [Projekt Gutenberg](https://www.projekt-gutenberg.org/roth/panoptik/chap002.html)  
 - **初出:** Frankfurter Zeitung, 1928年2月19日  
 - **再録:** Joseph Roth: Panoptikum. Gestalten und Kulissen. München (Knorr & Hirth) 1930.  

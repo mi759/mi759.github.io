@@ -55,8 +55,8 @@ jobs:
         working-directory: ddmd-stdio
         run: |
           composer install \
-          && echo $GITHUB_WORKSPACE} \
-          && echo $GITHUB_WORKSPACE >> ${GITHUB_PATH}
+          && echo $GITHUB_WORKSPACE/ddmd-stdio \
+          && echo $GITHUB_WORKSPACE/ddmd-stdio >> ${GITHUB_PATH}
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -73,7 +73,8 @@ jobs:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo \
+          chmod +x /usr/local/bin/hugo \
+          && hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          

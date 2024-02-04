@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Temporalily using DropBox
-      HUGO_DEB_URL: https://github.com/gohugoio/hugo/releases/download/v0.122.0/hugo_0.122.0_linux-amd64.deb
+      HUGO_DEB_URL: https://www.dropbox.com/scl/fi/i8g57gaqe80cfqpfcq5ia/hugo_0.122.0_linux-amd64.deb?rlkey=2ybutnqc2p9e2eo1wk8e90rct&dl=1
     steps:
       - name: Install Hugo CLI
         run: |
@@ -71,6 +71,8 @@ jobs:
         run: whoami
       - name: ls lha
         run: ls -lha /usr/local/bin/hugo
+      - name: chmod
+        run: sudo chmod a+x /usr/local/bin/hugo 
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules

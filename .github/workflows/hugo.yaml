@@ -71,6 +71,8 @@ jobs:
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: chmod Hugo
         run: sudo chmod a+x /usr/local/bin/hugo 
+      - name: check path
+        run: echo $GITHUB_PATH
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules

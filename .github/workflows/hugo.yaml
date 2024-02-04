@@ -71,10 +71,10 @@ jobs:
         run: whoami
       - name: ls lha
         run: ls -lha /usr/local/bin/hugo
+      - name: Change owner of hugo
+        run: sudo chown -R runner /usr/local/bin/hugo
       - name: ls lha
         run: ls -lha /usr/local/bin/hugo
-      - name: Change owner of hugo
-        run: sudo chown runner /usr/local/bin/hugo
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules

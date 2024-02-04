@@ -55,6 +55,8 @@ jobs:
         working-directory: ddmd-stdio
         run: |
           composer install \
+          && ls \
+          && pwd \
           && echo $GITHUB_WORKSPACE/ddmd-stdio \
           && echo $GITHUB_WORKSPACE/ddmd-stdio >> ${GITHUB_PATH}
       - name: Checkout
@@ -67,11 +69,7 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      - name: whoami
-        run: whoami
-      - name: ls lha
-        run: ls -lha /usr/local/bin/hugo
-      - name: chmod
+      - name: chmod Hugo
         run: sudo chmod a+x /usr/local/bin/hugo 
       - name: Build with Hugo
         env:

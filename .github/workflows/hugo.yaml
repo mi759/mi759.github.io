@@ -72,7 +72,7 @@ jobs:
       - name: ls lha
         run: ls -lha /usr/local/bin/hugo
       - name: Change owner of hugo
-        run: sudo chown -R runner /usr/local/bin/hugo
+        run: sudo chown -R runner:docker /usr/local/bin/hugo
       - name: ls lha
         run: ls -lha /usr/local/bin/hugo
       - name: Build with Hugo

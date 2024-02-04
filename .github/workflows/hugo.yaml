@@ -54,8 +54,7 @@ jobs:
       - name: Setup ddmd-stdio
         working-directory: ddmd-stdio
         run: |
-          composer install \
-          pwd >> ${GITHUB_PATH}
+          composer install && pwd >> ${GITHUB_PATH}
       - name: Checkout
         uses: actions/checkout@v4
         with:

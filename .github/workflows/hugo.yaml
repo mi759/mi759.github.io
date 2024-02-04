@@ -67,21 +67,13 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      - name: whoami
-        run: whoami
-      - name: ls lha
-        run: ls -lha /usr/local/bin/hugo
-      - name: Change owner of hugo
-        run: sudo chown -R runner:docker /usr/local/bin/hugo
-      - name: ls lha
-        run: ls -lha /usr/local/bin/hugo
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
         run: |
-          hugo \
+          sudo /usr/local/bin/hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          

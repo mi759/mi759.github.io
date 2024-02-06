@@ -58,8 +58,10 @@ jobs:
           && ls \
           && pwd \
           && echo $GITHUB_WORKSPACE/ddmd-stdio \
-          && echo "$GITHUB_WORKSPACE/ddmd-stdio" >> $GITHUB_PATH \
-          && echo "$PATH"
+          && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH \
+          && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH 
+      - name: Check path
+        run: echo $PATH
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -72,8 +74,6 @@ jobs:
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: chmod Hugo
         run: sudo chmod a+x /usr/local/bin/hugo 
-      - name: check path
-        run: echo $GITHUB_PATH
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules

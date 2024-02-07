@@ -59,7 +59,9 @@ jobs:
           && pwd \
           && echo $GITHUB_WORKSPACE/ddmd-stdio \
           && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH \
-          && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH 
+          && echo $PATH \
+          && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH \
+          && echo $PATH
       - name: Check path
         run: echo $PATH
       - name: Checkout

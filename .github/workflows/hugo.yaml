@@ -60,6 +60,8 @@ jobs:
           && echo $GITHUB_WORKSPACE/ddmd-stdio \
           && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH \
           && sudo chmod a+rwx ./ddmd-stdio.php
+      - name: Check permission
+        run: ls -l $GITHUB_WORKSPACE/ddmd-stdio/ddmd-stdio.php
       - name: Checkout
         uses: actions/checkout@v4
         with:

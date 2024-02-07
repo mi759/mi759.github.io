@@ -59,7 +59,7 @@ jobs:
           && pwd \
           && echo $GITHUB_WORKSPACE/ddmd-stdio \
           && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH \
-          && sudo chmod a+x $GITHUB_WORKSPACE/ddmd-stdio
+          && sudo chmod a+x ./ddmd-stdio.php
       - name: Check permission
         working-directory: ddmd-stdio
         run: ls -l

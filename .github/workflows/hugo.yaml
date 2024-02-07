@@ -58,12 +58,11 @@ jobs:
           && ls \
           && pwd \
           && echo $GITHUB_WORKSPACE/ddmd-stdio \
-          && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH \
-          && echo $PATH \
-          && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH \
-          && echo $PATH
+          && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH
       - name: Check path
-        run: echo $PATH
+        run: | 
+          echo $PATH \
+          echo "hoge" | ddmd-stdio
       - name: Checkout
         uses: actions/checkout@v4
         with:

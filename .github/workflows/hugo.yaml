@@ -58,7 +58,8 @@ jobs:
           && ls \
           && pwd \
           && echo $GITHUB_WORKSPACE/ddmd-stdio \
-          && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH
+          && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH \
+          && sudo chmod a+x $GITHUB_WORKSPACE/ddmd-stdio
       - name: Check path
         run: | 
           echo $PATH \

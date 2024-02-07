@@ -62,7 +62,7 @@ jobs:
       - name: Check path
         run: | 
           echo $PATH \
-          echo "hoge" | ddmd-stdio
+          echo "hoge" | ddmd-stdio.php
       - name: Checkout
         uses: actions/checkout@v4
         with:

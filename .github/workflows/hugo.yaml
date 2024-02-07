@@ -60,6 +60,9 @@ jobs:
           && echo $GITHUB_WORKSPACE/ddmd-stdio \
           && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH \
           && sudo chmod a+x $GITHUB_WORKSPACE/ddmd-stdio
+      - name: Check permission
+        working-directory: ddmd-stdio
+        run: ls -l
       - name: Check path
         run: | 
           echo $PATH \

@@ -57,7 +57,7 @@ jobs:
           composer install
           echo "$GITHUB_WORKSPACE/ddmd-stdio/" >> $GITHUB_PATH
           sudo chmod a+rwx ./ddmd-stdio.php
-      - name: Check STATA
+      - name: Check STAT
         run: stat $GITHUB_WORKSPACE/ddmd-stdio/ddmd-stdio.php
       - name: Check path
         run: echo "{hoge|fuga}" | ddmd-stdio.php

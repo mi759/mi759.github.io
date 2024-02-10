@@ -60,8 +60,8 @@ jobs:
           && echo $GITHUB_WORKSPACE/ddmd-stdio \
           && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH \
           && sudo chmod a+rwx ./ddmd-stdio.php
-      - name: Check permission
-        run: ls -l $GITHUB_WORKSPACE/ddmd-stdio/ddmd-stdio.php
+      - name: Check STATA
+        run: stat $GITHUB_WORKSPACE/ddmd-stdio/ddmd-stdio.php
       - name: Check path
         run: echo "{hoge|fuga}" | ddmd-stdio.php
       - name: Checkout

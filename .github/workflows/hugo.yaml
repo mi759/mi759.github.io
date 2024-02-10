@@ -54,12 +54,9 @@ jobs:
       - name: Setup ddmd-stdio
         working-directory: ddmd-stdio
         run: |
-          composer install \
-          && ls \
-          && pwd \
-          && echo $GITHUB_WORKSPACE/ddmd-stdio \
-          && echo $GITHUB_WORKSPACE/ddmd-stdio >> $GITHUB_PATH \
-          && sudo chmod a+rwx ./ddmd-stdio.php
+          composer install
+          echo "$GITHUB_WORKSPACE/ddmd-stdio/" >> $GITHUB_PATH \
+          sudo chmod a+rwx ./ddmd-stdio.php
       - name: Check STATA
         run: stat $GITHUB_WORKSPACE/ddmd-stdio/ddmd-stdio.php
       - name: Check path

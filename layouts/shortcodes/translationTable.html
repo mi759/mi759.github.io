@@ -22,7 +22,7 @@
   <tbody>
   {{range $index, $origRow :=  $origRows }}
     {{$transRow := index $transRows $index}}
-    {{$opts := dict "display" "block" "markup" "dendenmarkdown" }}
+    {{$opts := dict "display" "block" "markup" "goldmark" }}
     <tr>
       <td class="source">
         {{$origRow | $.Page.RenderString $opts}}

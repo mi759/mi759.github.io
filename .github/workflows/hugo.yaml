@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       # Temporalily using DropBox
-      HUGO_DEB_URL: https://www.dropbox.com/scl/fi/i8g57gaqe80cfqpfcq5ia/hugo_0.122.0_linux-amd64.deb?rlkey=2ybutnqc2p9e2eo1wk8e90rct&dl=1
+      HUGO_DEB_URL: https://www.dropbox.com/scl/fi/uaj00li4ehm9ks4s2ocb8/hugo_0.124.1_linux-amd64.deb?rlkey=784sh1nh5gcuf20elb1y8vl04&dl=1
     steps:
       - name: Install Hugo CLI
         run: |
@@ -41,26 +41,6 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Install Dart Sass
         run: sudo snap install dart-sass
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '7.4'
-          tools: 'composer'
-      - name: Checkout ddmd-stdio
-        uses: actions/checkout@v4
-        with:
-          repository: mi759/ddmd-stdio
-          path: ddmd-stdio
-      - name: Setup ddmd-stdio
-        working-directory: ddmd-stdio
-        run: |
-          composer install
-          echo "$GITHUB_WORKSPACE/ddmd-stdio/" >> $GITHUB_PATH
-          sudo chmod a+rwx ./ddmd-stdio.php
-      - name: Check STAT
-        run: stat $GITHUB_WORKSPACE/ddmd-stdio/ddmd-stdio.php
-      - name: Check path
-        run: echo "{hoge|fuga}" | ddmd-stdio.php
       - name: Checkout
         uses: actions/checkout@v4
         with:

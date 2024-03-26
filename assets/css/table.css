@@ -118,7 +118,7 @@ h6 {
     color:gray;
 }
 
-.footnote {
+.footnotes ol li {
     font-size: 0.9em;
     color: gray;
     padding-left: 0.5em;

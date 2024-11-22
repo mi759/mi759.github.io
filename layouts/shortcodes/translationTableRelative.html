@@ -2,45 +2,31 @@
 {{$transFiles := split (.Get "translated") ","}}
 {{$path := $.Page.RelPermalink}}
 {{if eq (len $origFiles) (len $transFiles)}}
-{{range $fileIndex, $origFile := $origFiles}}
-{{$transFile := index $transFiles $fileIndex}}
-
-{{$origContent := replace ((printf "%s%s" $path $origFile) | readFile) "\r\n" "\n" }}
-{{$transContent := replace ((printf "%s%s" $path $transFile) | readFile) "\r\n" "\n"}}
-{{$origRows := split $origContent "\n\n" }}
-{{$transRows := split $transContent "\n\n" }}
-{{if eq (len $origRows) (len $transRows)}}
-<div class="translation">
-<div>
-  <input type="radio" id="src-only" name="display" value="src-only" onchange="srcOnly()">
-  <label for="src-only">原文のみ</label>
-  <input type="radio" id="src-tgt" name="display" value="src-tgt" onchange="srcAndTgt()" checked>
-  <label for="src-tgt">対訳</label>
-  <input type="radio" id="tgt-only" name="display" value="tgt-only" onchange="tgtOnly()">
-  <label for="tgt-only">訳文のみ</label>
-</div>
-<table class="translation">
-  <tbody>
-  {{range $index, $origRow :=  $origRows }}
-    {{$transRow := index $transRows $index}}
-    {{$opts := dict "display" "block" "markup" "goldmark" }}
-    <tr>
-      <td class="source">
-        {{$origRow | $.Page.RenderString $opts}}
-      </td>
-      <td class="target">
-        {{$transRow | $.Page.RenderString $opts}}
-      </td>
-    </tr>
+  {{range $fileIndex, $origFile := $origFiles}}
+    {{$transFile := index $transFiles $fileIndex}}
+    {{$origContent := replace ((path.Join "content" $path $origFile) | readFile) "\r\n" "\n" }}
+    {{$transContent := replace ((path.Join "content" $path $transFile) | readFile) "\r\n" "\n"}}
+    {{$origRows := split $origContent "\n\n" }}
+    {{$transRows := split $transContent "\n\n" }}
+    {{if eq (len $origRows) (len $transRows)}}
+      {{partial "_internal/translation-table-open.html" .}}
+        {{range $index, $origRow :=  $origRows }}
+          {{$transRow := index $transRows $index}}
+          {{$opts := dict "display" "block" "markup" "goldmark" }}
+          <tr>
+            <td class="source">
+              {{$origRow | $.Page.RenderString $opts}}
+            </td>
+            <td class="target">
+              {{$transRow | $.Page.RenderString $opts}}
+            </td>
+          </tr>
+        {{end}}
+      {{partial "_internal/translation-table-close.html" .}}
+    {{else}}
+      Failed to generate parallel translation table: Number of rows doesn't match.
+    {{end}}
   {{end}}
-  </tbody>
-</table>
-</div>
 {{else}}
-Failed to generate parallel translation table: Number of rows doesn't match.
-{{end}}
-
-{{end}}
-{{else}}
-Failed to generate parallel translation table: Number of files doesn't match.
+  Failed to generate parallel translation table: Number of files doesn't match.
 {{end}}

@@ -18,6 +18,7 @@ paginate=5 # articles per page
       ruby = true
   	[markup.goldmark.renderer]
       hardWraps = true
+      unsafe = true
     [markup.goldmark.parser]
       [markup.goldmark.parser.attribute]
         block = true

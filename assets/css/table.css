@@ -128,3 +128,10 @@ h6 {
 .footnote p {
     line-height: 1.2;
 }
+
+/* Horizontal section */
+
+hr.short {
+    margin: 1em 5em;
+    border-top: 2px solid var(--bordercl);
+}

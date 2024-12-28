@@ -6,6 +6,10 @@ draft: false
 
 翻訳した作品および関連する文章の一覧です。「◇」記号のあるものは翻訳ではなく作者紹介などになります。
 
+- フリードリヒ・マクシミリアン・クリンガー Friedrich Maximilian Klinger (1752-1831)
+    - 劇作家・小説家。文学思潮「疾風怒濤(Sturm und Drang)」の代表的作家だが、ロシアに渡って軍人としても成功した。
+    - [ファウストの生涯、行状と地獄行き Faust's Leben, Thaten und Höllenfahrt (1799)](/translations/friedrich_maximilian_klinger/fausts_leben)
+
 - フリードリヒ・シラー Friedrich Schiller (1759-1805)
     - 劇作家・詩人・哲学者。親友ゲーテと共に一時代を築いた。
     - [日本大百科全書での作者紹介(外部サイト)◇](https://kotobank.jp/word/%E3%82%B7%E3%83%A9%E3%83%BC%28Friedrich%20von%20Schiller%29-1546468)

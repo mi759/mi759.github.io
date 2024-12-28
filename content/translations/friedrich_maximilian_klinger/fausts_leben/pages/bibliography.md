@@ -20,7 +20,7 @@ tags: ["翻訳", "ドイツ文学", "Friedrich Maximilian Klinger"]
 
 * 初版(1791): [Fausts Leben, Thaten und Höllenfahrt in fünf Büchern. St. Petersburg (Johann Friedrich Kriele) 1791](https://www.deutschestextarchiv.de/book/show/klinger_faust_1791) 
 * 増補改訂2版(1794): [Faust's Leben, Thaten und Höllenfahrt. In fünf Büchern. Zweyte, verbesserte und vermehrte Ausgabe. St. Petersburg 1794](https://www.google.co.jp/books/edition/Faust_s_Leben_Thaten_und_H_llenfahrt_By/s6FgAAAAcAAJ) 
-* 新増補改訂版(1799): [Faust's Leben, Thaten und Höllenfahrt. In fünf Büchern. Neue verbesserte und vermehrte Ausgabe 1799](https://books.google.co.jp/books/about/Faust_s_leben_thaten_und_h%C3%B6llenfahrt_in.html?id=BGAqAAAAMAAJ)
+* 新増補改訂版(1799): [Faust's Leben, Thaten und Höllenfahrt. In fünf Büchern. Neue verbesserte und vermehrte Ausgabe. 1799](https://books.google.co.jp/books/about/Faust_s_leben_thaten_und_h%C3%B6llenfahrt_in.html?id=BGAqAAAAMAAJ)
 * 著作集版(1815): [F. M. Klingers Werke. Dritter Band. Faust's Leben, Thaten und Höllenfahrt. Königsberg (Friedrich Nicolovius) 1815](https://www.google.co.jp/books/edition/F_M_Klingers_Werke/_lBjAAAAcAAJ)
 
 このほかにも海賊版や、出版年の異なる再版などが多数存在しています。

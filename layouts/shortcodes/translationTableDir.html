@@ -1,40 +1,7 @@
 {{$relativeOrigDir := .Get "original"}}
 {{$relativeTransDir := .Get "translated"}}
-{{$path := $.Page.RelPermalink}}
+{{$page := .}}
 
-{{$origDir := path.Join "content" $path $relativeOrigDir}}
-{{$transDir := path.Join "content" $path $relativeTransDir}}
-{{$origFiles := readDir $origDir}}
-{{$transFiles := readDir $transDir}}
-{{if eq (len $origFiles) (len $transFiles)}}
-  {{partial "_internal/translation-table-open.html"}}
-  {{range $index, $origFile := $origFiles}}
-    {{$transFile := index $transFiles $index}}
-    {{$origFilePath := path.Join $origDir $origFile.Name}}
-    {{$transFilePath := path.Join $transDir $transFile.Name}}
-    {{$origContent := replace ($origFilePath | readFile) "\r\n" "\n" }}
-    {{$transContent := replace ($transFilePath | readFile) "\r\n" "\n"}}
-    {{$origRows := split $origContent "\n\n" }}
-    {{$transRows := split $transContent "\n\n" }}
-    {{if eq (len $origRows) (len $transRows)}}
-
-      {{range $index, $origRow :=  $origRows }}
-        {{$transRow := index $transRows $index}}
-        {{$opts := dict "display" "block" "markup" "goldmark" }}
-          <tr>
-            <td class="source">
-              {{$origRow | $.Page.RenderString $opts}}
-            </td>
-            <td class="target">
-              {{$transRow | $.Page.RenderString $opts}}
-            </td>
-          </tr>
-        {{end}}
-    {{else}}
-      Failed to generate parallel translation table: Number of rows doesn't match.
-    {{end}}
-  {{end}}
-  {{partial "_internal/translation-table-close.html"}}
-{{else}}
-  Failed to generate parallel translation table: Number of files doesn't match.
-{{end}}
+{{partial "_internal/translation-table-open.html"}}
+{{partial "_internal/translation-table-rows-dir-relative.html" (dict "page" $page "relativeOrigDir" $relativeOrigDir "relativeTransDir" $relativeTransDir)}}
+{{partial "_internal/translation-table-close.html"}}

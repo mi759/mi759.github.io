@@ -5,7 +5,7 @@ draft: false
 tags: ["翻訳", "ドイツ文学", "Joseph Roth"]
 ---
 
-{{< translationTableRelative original="de.md" translated="ja.md" >}}
+{{< translationTable original="de.md" translated="ja.md" >}}
 
 - **原文出典:** [Projekt Gutenberg](https://www.projekt-gutenberg.org/roth/panoptik/chap001.html)  
 - **初出:** Frankfurter Zeitung, 1928年6月10日  

@@ -1,3 +1,0 @@
-### Vorrede zur zweyten Auflage. {.center}
-
-Da nun die beyden Seitenstücke zu _Faust_, _Raphael_ und _Giafar_ ershienen sind, so weiß der Leser, was er an diesen dreyen Werken hat. In der Fortsetzung und Vollendung _Giafars_ sagte der Verfasser, einige Worte über seinen Zweck, mehr wollte er sich nicht verstatten. Diese neue Ausgabe _Fausts_, welche de wiederhohlten Nachdrücke bisher verhindert haben, ist um vieles vermehrt worden; andeuten lassen sich diese Vermehrungen nicht, da sie durch's Ganze, und zwar bis an's Ende zerstreut sind.

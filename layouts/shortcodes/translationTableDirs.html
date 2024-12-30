@@ -1,0 +1,7 @@
+{{$relativeOrigDirs := .Get "original"}}
+{{$relativeTransDirs := .Get "translated"}}
+{{$page := .}}
+
+{{partial "_internal/translation-table-open.html"}}
+{{partial "_internal/translation-table-rows-dirs-relative.html" (dict "page" $page "relativeOrigDirs" $relativeOrigDirs "relativeTransDirs" $relativeTransDirs)}}
+{{partial "_internal/translation-table-close.html"}}

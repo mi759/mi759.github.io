@@ -1,0 +1,16 @@
+{{$page := .page}}
+{{$origFilePath := .origFilePath}}
+{{$transFilePath := .transFilePath}}
+
+{{$origContent := replace ($origFilePath | readFile) "\r\n" "\n" }}
+{{$transContent := replace ($transFilePath | readFile) "\r\n" "\n"}}
+{{$origRows := split $origContent "\n\n" }}
+{{$transRows := split $transContent "\n\n" }}
+{{if eq (len $origRows) (len $transRows)}}
+  {{range $index, $origRow :=  $origRows }}
+     {{$transRow := index $transRows $index}}
+     {{partial "_internal/translation-table-row.html" (dict "page" $page "origRow" $origRow "transRow" $transRow)}}
+  {{end}}
+{{else}}
+  {{errorf "Failed to generate parallel translation table: Number of rows doesn't match. orig:%d. trans:%d" (len $origRows) (len $transRows)}}
+{{end}}

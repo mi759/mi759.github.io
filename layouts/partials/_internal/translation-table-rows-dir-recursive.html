@@ -1,0 +1,20 @@
+{{$page := .page}}
+{{$origDir := .origDir}}
+{{$transDir := .transDir}}
+
+{{$origFiles := readDir $origDir}}
+{{$transFiles := readDir $transDir}}
+{{if eq (len $origFiles) (len $transFiles)}}
+  {{range $index, $origFile := $origFiles}}
+    {{$transFile := index $transFiles $index}}
+    {{$origFilePath := path.Join $origDir $origFile.Name}}
+    {{$transFilePath := path.Join $transDir $transFile.Name}}
+    {{if $origFile.IsDir}}
+        {{partial "_internal/translation-table-rows-dir-recursive.html" (dict "page" $page "origDir" $origFilePath "transDir" $transFilePath)}}
+    {{else}}
+        {{partial "_internal/translation-table-rows-file.html" (dict "page" $page "origFilePath" $origFilePath "transFilePath" $transFilePath)}}
+    {{end}}
+  {{end}}
+{{else}}
+  {{errorf "Failed to generate parallel translation table: Number of files doesn't match. orig:%d, trans:%d" (len $origFiles) (len $transFiles)}}
+{{end}}

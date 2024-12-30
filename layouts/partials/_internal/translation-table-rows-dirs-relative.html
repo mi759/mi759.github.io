@@ -1,0 +1,12 @@
+{{$page := .page}}
+{{$relativeOrigDirs := split .relativeOrigDirs ","}}
+{{$relativeTransDirs := split .relativeTransDirs ","}}
+
+{{if eq (len $relativeOrigDirs) (len $relativeTransDirs)}}
+  {{range $fileIndex, $relativeOrigDir := $relativeOrigDirs}}
+    {{$relativeTransDir := index $relativeTransDirs $fileIndex}}
+    {{partial "_internal/translation-table-rows-dir-relative.html" (dict "page" $page "relativeOrigDir" $relativeOrigDir "relativeTransDir" $relativeTransDir)}}
+  {{end}}
+{{else}}
+  {{errorf "Failed to generate parallel translation table: Number of directories doesn't match. orig:%d, trans:%d" (len $relativeOrigDirs) (len $relativeTransDirs)}}
+{{end}}

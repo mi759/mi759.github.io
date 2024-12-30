@@ -103,6 +103,10 @@ h6 {
     padding-top: .5em;
 }
 
+.gothic {
+    font-family: 'Arial', sans-serif;
+}
+
 
 /* Footnotes */
 .footnotes hr {

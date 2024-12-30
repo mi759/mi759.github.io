@@ -5,7 +5,7 @@ draft: false
 tags: ["翻訳", "ドイツ文学", "Friedrich Schiller"]
 ---
 
-{{< translationTableRelative original="de.md" translated="ja.md" >}}
+{{< translationTable original="de.md" translated="ja.md" >}}
 
 - **原文出典:** [Zeno.org](http://www.zeno.org/nid/20005606853) ※下記初出及び全集を参照して、表記を一部改めた。  
 - **初出:** [Friedrich Schiller: Die Braut von Messina oder die feindlichen Brüder / ein Trauerspiel mit Chören von Schiller. Tübingen (J. G. Cotta'sche Buchhandlung) 1803](https://books.google.lv/books?id=zQI7AAAAcAAJ), S. III-XIV.  

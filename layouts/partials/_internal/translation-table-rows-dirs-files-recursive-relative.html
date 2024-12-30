@@ -1,0 +1,25 @@
+{{$page := .page}}
+{{$relativeOrigPaths := split .relativeOrigPaths ","}}
+{{$relativeTransPaths := split .relativeTransPaths ","}}
+
+{{$path := $page.Page.RelPermalink}}
+
+
+{{if eq (len $relativeOrigPaths) (len $relativeTransPaths)}}
+  {{range $fileIndex, $relativeOrigPath := $relativeOrigPaths}}
+    {{$relativeTransPath := index $relativeTransPaths $fileIndex}}
+    {{$origPath := path.Join "content" $path $relativeOrigPath}}
+    {{$transPath := path.Join "content" $path $relativeTransPath}}
+    {{$origFileInfo := os.Stat $origPath}}
+    {{$transFileInfo := os.Stat $transPath}}
+    {{if and $origFileInfo.IsDir $transFileInfo.IsDir}}
+      {{partial "_internal/translation-table-rows-dir-recursive.html" (dict "page" $page "origDir" $origPath "transDir" $transPath)}}
+    {{else if and (not $origFileInfo.IsDir) (not $transFileInfo.IsDir)}}
+      {{partial "_internal/translation-table-rows-file.html" (dict "page" $page "origFilePath" $origPath "transFilePath" $transPath)}}
+    {{else}}
+      {{errorf "Failed to generate parallel translation table: File types don't match. orig:%t, trans:%t" $origFileInfo.IsDir $transFileInfo.IsDir}}
+    {{end}}
+  {{end}}
+{{else}}
+  {{errorf "Failed to generate parallel translation table: Number of paths doesn't match. orig:%d, trans:%d" (len $relativeOrigPaths) (len $relativeTransPaths)}}
+{{end}}

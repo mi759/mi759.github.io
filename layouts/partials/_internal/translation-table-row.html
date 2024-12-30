@@ -1,0 +1,13 @@
+
+{{$page := .page}}
+{{$origRow := .origRow}}
+{{$transRow := .transRow}}
+{{$opts := dict "display" "block" "markup" "goldmark" }}
+<tr>
+    <td class="source">
+        {{$origRow | $page.Page.RenderString $opts}}
+    </td>
+    <td class="target">
+        {{$transRow | $page.Page.RenderString $opts}}
+    </td>
+</tr>

@@ -34,6 +34,12 @@ paginate=5 # articles per page
 	subtitle = "英語やドイツ語の作品の試訳など。"
 	mainSections = ["posts"]
 
+[module]
+  [[module.mounts]]
+    excludeFiles = '/**/src/**/*'
+    source = 'content'
+    target = 'content'
+
 # Main menu Items
 
 [[menu.main]]

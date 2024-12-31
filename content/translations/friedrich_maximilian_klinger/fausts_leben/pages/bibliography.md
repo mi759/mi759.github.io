@@ -1,12 +1,12 @@
 ---
-title: "Friedrich Maximillian Klinger: Faust's Leben, Taten und Höllenfahrt (1799) - 書誌情報"
+title: "Friedrich Maximillian Klinger: Faust's Leben, Thaten und Höllenfahrt (1799) - 書誌情報"
 date: 2024-03-30T22:26:49+09:00
 draft: false
 tags: ["翻訳", "ドイツ文学", "Friedrich Maximilian Klinger"]
 ---
 
 ## 底本
-* 底本: [\[F. M. Klinger\]: Faust's Leben, Thaten und Höllenfahrt. In fünf Büchern. Neue verbesserte und vermehrte Ausgabe 1799.](https://www.google.co.jp/books/edition/Faust_s_Leben_Thaten_und_H_llenfahrt_By/s6FgAAAAcAAJ)
+* 底本: [\[F. M. Klinger\]: Faust's Leben, Thaten und Höllenfahrt. In fünf Büchern. Neue verbesserte und vermehrte Ausgabe 1799.](https://books.google.co.jp/books/about/Faust_s_leben_thaten_und_h%C3%B6llenfahrt_in.html?id=BGAqAAAAMAAJ)
 * 電子テキスト: [Projekt Gutenberg](https://www.projekt-gutenberg.org/klinger/fstkling/fstkling.html), [Zeno.org](http://www.zeno.org/nid/20005173043)
 
 本サイトの原文では、電子テキストをベースに、底本を参照して表記を改めています。

@@ -8,6 +8,7 @@ draft: false
 
 - フリードリヒ・マクシミリアン・クリンガー Friedrich Maximilian Klinger (1752-1831)
     - 劇作家・小説家。文学思潮「疾風怒濤(Sturm und Drang)」の代表的作家であるほか、ロシアに渡って軍人としても成功した。
+    - [作者紹介◇](/translations/friedrich_maximilian_klinger/biography)
     - [ファウストの生涯、行状と地獄行き Faust's Leben, Thaten und Höllenfahrt (1799)](/translations/friedrich_maximilian_klinger/fausts_leben/top)
 
 - フリードリヒ・シラー Friedrich Schiller (1759-1805)

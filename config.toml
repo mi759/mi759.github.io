@@ -3,42 +3,47 @@ languageCode = 'ja-jp'
 title = '試訳そのほか'
 theme = 'archie'
 copyright = '© mi759'
-hasCJKLanguage = true # Wordcount
+hasCJKLanguage = true               # Wordcount
 # Code Highlight
 pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-paginate=5 # articles per page
+paginate = 5 # articles per page
 
 [markup]
-  defaultMarkdownHandler = 'goldmark'
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      ruby = true
-  	[markup.goldmark.renderer]
-      hardWraps = true
-      unsafe = true
-    [markup.goldmark.parser]
-      [markup.goldmark.parser.attribute]
-        block = true
+defaultMarkdownHandler = 'goldmark'
+[markup.goldmark]
+[markup.goldmark.extensions]
+ruby = true
+[markup.goldmark.renderer]
+hardWraps = true
+unsafe = true
+[markup.goldmark.parser]
+[markup.goldmark.parser.attribute]
+block = true
+[markup.tableOfContents]
+endLevel = 3
+ordered = false
+startLevel = 2
+
 
 [security]
- [security.exec]
-    allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$']
+[security.exec]
+allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$']
 
 [params]
-	mode="toggle" # color-mode → light,dark,toggle or auto
-	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
-	customcss = ["css/table.css"]
-	subtitle = "英語やドイツ語の作品の試訳など。"
-	mainSections = ["posts"]
+mode = "toggle"               # color-mode → light,dark,toggle or auto
+useCDN = false                # don't use CDNs for fonts and icons, instead serve them locally.
+customcss = ["css/table.css"]
+subtitle = "英語やドイツ語の作品の試訳など。"
+mainSections = ["posts"]
 
 [module]
-  [[module.mounts]]
-    excludeFiles = '/**/src/**/*'
-    source = 'content'
-    target = 'content'
+[[module.mounts]]
+excludeFiles = '/**/src/**/*'
+source = 'content'
+target = 'content'
 
 # Main menu Items
 

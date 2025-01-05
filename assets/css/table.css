@@ -109,6 +109,14 @@ h6 {
 
 
 /* Footnotes */
+.footnote-ref::before {
+    content: '[';
+}
+
+.footnote-ref::after {
+    content: ']';
+}
+
 .footnotes hr {
     margin: 0;
 }
@@ -118,8 +126,8 @@ h6 {
     padding-left: 0;
 }
 
-.footnotes ol li::marker{
-    color:gray;
+.footnotes ol li::marker {
+    color: gray;
 }
 
 .footnotes ol li {

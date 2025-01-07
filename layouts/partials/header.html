@@ -91,11 +91,18 @@
 			</script>
 	{{ end }}
 	
-	<!-- Custom CSS style get applied last -->
+	<!-- Custom CSS style -->
 	{{- if isset .Site.Params "customcss" }}
 		{{ range .Site.Params.customCSS }}
 		{{ $customstyle := resources.Get . | fingerprint }}
 		<link rel="stylesheet" type="text/css" href="{{ $customstyle.Permalink }}">
+		{{ end }}
+	{{- end -}}
+	<!-- Custom Dark CSS style -->
+	{{- if isset .Site.Params "custom_dark_css" }}
+		{{ range .Site.Params.custom_dark_css }}
+		{{ $customstyle := resources.Get . | fingerprint }}
+		<link id="customDarkModeStyle" rel="stylesheet" type="text/css" href="{{ $customstyle.Permalink }}">
 		{{ end }}
 	{{- end -}}
 	{{- range .Site.Params.customJS }}

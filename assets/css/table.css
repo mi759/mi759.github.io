@@ -95,14 +95,6 @@ h6 {
     font-style: italic;
 }
 
-.emphasized {
-    background-position: top left;
-    background-repeat: repeat-x;
-    background-image: radial-gradient(black 10%, transparent 15%);
-    background-size: 1em 1em;
-    padding-top: .5em;
-}
-
 .gothic {
     font-family: 'Arial', sans-serif;
 }

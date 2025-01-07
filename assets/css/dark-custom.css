@@ -1,0 +1,8 @@
+.target em {
+    font-style: normal;
+    background-position: top left;
+    background-repeat: repeat-x;
+    background-image: radial-gradient(white 10%, transparent 15%);
+    background-size: 1em 1em;
+    padding-top: .5em;
+}

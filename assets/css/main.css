@@ -3,6 +3,8 @@
 
 /* Markdown */
 :root {
+  --textcolor: #232323;
+  --lighttextcolor: #737373;
   --maincolor: darkcyan;
   --bordercl: lightsteelblue;
   --callouctcolor: dodgerblue;
@@ -23,7 +25,7 @@
 }
 
 html {
-  color: #232333;
+  color: var(--textcolor);
   font-family: var(--monospace-family);
   font-size: 15px;
   line-height: 1.8em;

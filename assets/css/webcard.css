@@ -1,0 +1,48 @@
+.webcard-link {
+    border: solid 1px var(--bordercl);
+    color: var(--textcolor);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 120px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.webcard-link:hover {
+    border: solid 1px var(--hovercolor);
+}
+
+.webcard-link:hover .webcard-description {
+    color: var(--hovercolor);
+}
+
+.webcard-left {
+    padding: 10px;
+}
+
+.webcard-title {
+    font-weight: bold;
+}
+
+.webcard-description {
+    color: var(--lighttextcolor);
+    font-size:small;
+    line-height: 1.3rem;
+}
+
+.webcard-hostname {
+    font-size: small;
+}
+
+.webcard-image-container {
+    height: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.webcard-image-container img {
+    height: 100%;
+}

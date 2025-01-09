@@ -1,0 +1,118 @@
+{{- $url := (.Get 0) -}}
+{{- $u := urls.Parse $url -}}
+
+{{- with $result := resources.GetRemote $url -}}
+    {{/* Status Code Error */}}
+    {{- with $result.Err -}}
+    <div class="webcard-container">
+        <div>
+            <div>
+                <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 512 512" style="width: 256px; height: 256px; opacity: 1;"
+                    xml:space="preserve">
+                    <g>
+                        <path d="M256,0C114.613,0,0,114.615,0,256s114.613,256,256,256c141.383,0,256-114.615,256-256S397.383,0,256,0z
+                            M99.594,144.848L367.15,412.406C335.754,434.781,297.402,448,256,448c-105.871,0-192-86.131-192-192
+                            C64,214.596,77.217,176.244,99.594,144.848z M412.404,367.15L144.848,99.594C176.242,77.219,214.594,64,256,64
+                            c105.867,0,192,86.131,192,192C448,297.404,434.781,335.756,412.404,367.15z"
+                            style="fill: rgb(75, 75, 75);"></path>
+                    </g>
+                </svg>
+            </div>
+
+            <div>
+                <div>
+                    <div>
+                        {{ $u.Host | truncate 30 }} にアクセスできません
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <img src="https://www.google.com/s2/favicons?sz=14&amp;domain_url={{ $u.Scheme }}://{{ $u.Host }}"
+                            alt="{{ $u.Host }} favicon image">
+                        <span>{{ $u.Host | truncate 30 }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/* Status Code Success */}}
+    {{- else -}}
+        {{- $title := "" -}}
+        {{- $description := "" -}}
+        {{- $image := "" -}}
+        {{- $find := "" -}}
+
+        {{- if eq $u.Hostname "www.youtube.com" -}}
+            {{- $find = index (findRE "<body.*?>(.|\n)*?</body>" $result.Content) 0 -}}
+        {{- else -}}
+            {{- $find = index (findRE "<head.*?>(.|\n)*?</head>" $result.Content) 0 -}}
+        {{- end -}}
+
+        {{- $note :="" -}}
+        <!-- Get and parse meta info -->
+        {{- range $meta := findRE "(?s)<meta.*?>" $find -}}
+            {{- $name := replaceRE "(?s)<.*name=\"(.*?)\".*>" "$1" $meta -}}
+            {{- $property := replaceRE "(?s)<.*property=\"(.*?)\".*>" "$1" $meta -}}
+            {{- $content := replaceRE "(?s)<.*content=\"(.*?)\".*>" "$1" $meta -}}
+            {{- if eq $property "og:title" -}}
+                {{- $title = $content -}}
+            {{- else if eq $property "og:description" -}}
+                {{- $description = $content -}}
+            {{- else if eq $property "og:image" -}}
+                {{- $image = $content -}}
+            {{- end -}}
+            
+            {{- if and (eq $description "") (eq $name "description") -}}
+                {{- $description = $content -}}
+            {{- end -}}
+        {{- end -}}
+
+        {{/* Render Card */}}
+        <div class="webcard-container">
+            <a class="webcard-link" href="{{ $url }}">
+                <div class="webcard-left">
+                    <div class="webcard-text">
+                        {{/* Title */}}
+                        <div class="webcard-title">
+                            {{ with $title }}
+                                {{ $title | truncate 50 }}
+                            {{ else }}
+                                {{ $u.Host | truncate 30 }}
+                            {{ end }}
+                        </div>
+                        {{/* Description */}}
+                        <div class="webcard-description">
+                            {{ $description | truncate 80 }}
+                        </div>
+                    </div>
+
+                    {{/* Favicon and Hostname */}}
+                    <div>
+                        <div>
+                            <img src="https://www.google.com/s2/favicons?sz=14&amp;domain_url={{ $u.Scheme }}://{{ $u.Host }}"
+                                alt="{{ $u.Host }} favicon image">
+                            <span class="webcard-hostname">{{ $u.Host | truncate 30 }}</span>
+                        </div>
+                    </div>
+                </div>
+                
+                {{/* Image */}}
+                <div class="webcard-image-container">
+                    {{ with $image }}
+                        <img src="{{ htmlUnescape $image }}" alt="{{ $description }}">
+                    {{ else }}
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                            </svg>
+                        </div>
+                    {{ end }}
+                </div>
+            </a>
+        </div>
+    {{- end -}}
+{{- end -}}

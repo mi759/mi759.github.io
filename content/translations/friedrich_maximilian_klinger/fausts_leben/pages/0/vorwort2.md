@@ -5,4 +5,6 @@ draft: false
 tags: ["翻訳", "ドイツ文学", "Friedrich Maximilian Klinger"]
 ---
 
+{{< prevNextPair prev="../vorwort" top="../../../top" next="../../1/1-1" >}}
 {{< translationTable original="../../../src/de/0/0-2-vorwort2.md" translated="../../../src/ja/0/0-2-vorwort2.md" >}}
+{{< /prevNextPair >}}

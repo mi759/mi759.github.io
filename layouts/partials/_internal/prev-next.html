@@ -1,0 +1,8 @@
+{{ $prev := .prev }}
+{{ $top := .top }}
+{{ $next := .next }}
+<div class="prev-next-container">
+{{- if not (eq $prev "") -}}<a href="{{$prev}}">&lt; prev</a>{{- end -}}
+{{- if not (eq $top "") -}}<a href="{{$top}}">top</a>{{- end -}}
+{{- if not (eq $next "") -}}<a href="{{$next}}">next &gt;</a>{{- end -}}
+</div>

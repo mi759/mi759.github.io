@@ -1,0 +1,6 @@
+{{ $prev := .Get "prev" }}
+{{ $top := .Get "top"}}
+{{ $next := .Get "next" }}
+{{partial "_internal/prev-next.html" (dict "prev" $prev "top" $top "next" $next)}}
+{{.Inner}}
+{{partial "_internal/prev-next.html" (dict "prev" $prev "top" $top "next" $next)}}

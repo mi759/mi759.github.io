@@ -10,7 +10,7 @@ Faust's Leben, Thaten und Höllenfahrt
 
 {{< figure src="../images/klinger_faust_1799_titel_transparent.png" alt="新増補改訂版(1799)の口絵" title="新増補改訂版(1799)の口絵" class="center" width="320" >}}
 
-※現在、第一巻のみ打ち込み完了しています。第二巻以降は作業中です。
+※現在、第二巻のみ打ち込み完了しています。第三巻以降は作業中です。
 
 ## 解説
 * [書誌情報](../pages/bibliography)
